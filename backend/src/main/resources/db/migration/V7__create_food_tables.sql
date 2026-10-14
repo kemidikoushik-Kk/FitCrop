@@ -1,0 +1,19 @@
+-- V7: Create Food Items Table
+CREATE TABLE IF NOT EXISTS food_items (
+    id VARCHAR(36) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    serving_unit VARCHAR(50) NOT NULL,
+    serving_size_grams DOUBLE PRECISION DEFAULT 100.0,
+    calories DOUBLE PRECISION NOT NULL,
+    protein DOUBLE PRECISION NOT NULL,
+    carbohydrates DOUBLE PRECISION NOT NULL,
+    fat DOUBLE PRECISION NOT NULL,
+    fiber DOUBLE PRECISION DEFAULT 0.0,
+    is_vegetarian BOOLEAN DEFAULT TRUE,
+    is_vegan BOOLEAN DEFAULT FALSE,
+    allergen_tags VARCHAR(255),
+    is_active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
