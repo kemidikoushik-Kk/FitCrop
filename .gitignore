@@ -42,5 +42,3 @@ desktop.ini
 # Portable tools (downloaded by IDE)
 .git-portable.zip
 
-# Temp: workflow pushed separately
-.github/workflows/
