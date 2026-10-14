@@ -2,13 +2,13 @@
 
 > **Personalized Gym Training & Nutrition Planner for Corporate Professionals**
 
-[![CI/CD Pipeline](https://github.com/fitcorp/fitcorp/actions/workflows/ci.yml/badge.svg)](https://github.com/fitcorp/fitcorp/actions)
+[![CI/CD Pipeline](https://github.com/kemidikoushik-Kk/FitCrop/actions/workflows/ci.yml/badge.svg)](https://github.com/kemidikoushik-Kk/FitCrop/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
 [![Java 21 LTS](https://img.shields.io/badge/Java-21%20LTS-blue.svg)](https://adoptium.net)
 [![Spring Boot 3.3.5](https://img.shields.io/badge/Spring%20Boot-3.3.5-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![React 18](https://img.shields.io/badge/React-18.3-61dafb.svg)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178c6.svg)](https://www.typescriptlang.org)
-[![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-336791.svg)](https://www.postgresql.org)
+[![MySQL 8](https://img.shields.io/badge/MySQL-8.0%2FAiven-4479A1.svg)](https://www.mysql.com)
 [![Docker](https://img.shields.io/badge/Docker-Enabled-2496ed.svg)](https://www.docker.com)
 
 ---
@@ -43,7 +43,7 @@ The platform comes pre-seeded with sample corporate profiles:
 - **Framework**: Spring Boot 3.3.5
 - **Security**: Spring Security 6 with stateless JWT authentication (HMAC-SHA256, 15-min access token + rotating 7-day database refresh tokens)
 - **Data Persistence**: Spring Data JPA & Hibernate with Jakarta Validation
-- **Database**: PostgreSQL 16 (Production) / H2 in PostgreSQL compatibility mode (Local Dev)
+- **Database**: MySQL 8.0 / Aiven Cloud MySQL (Production) & embedded H2 in MySQL mode (Local Dev)
 - **Schema Management**: Flyway database migrations (V1 to V14)
 - **API Documentation**: Springdoc OpenAPI 2.6.0 with Swagger UI (`/swagger-ui/index.html`)
 
@@ -67,8 +67,8 @@ The platform comes pre-seeded with sample corporate profiles:
 
 ```bash
 # Clone the repository
-git clone https://github.com/fitcorp/fitcorp.git
-cd fitcorp
+git clone https://github.com/kemidikoushik-Kk/FitCrop.git
+cd FitCrop
 
 # Copy environment variables
 cp .env.example .env
