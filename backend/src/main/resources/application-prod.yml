@@ -1,10 +1,9 @@
 spring:
   datasource:
-    # Railway provides DATABASE_URL as a full JDBC URL — use it directly if set
-    url: ${SPRING_DATASOURCE_URL:${DATABASE_URL:jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:fitcorp}}}
-    username: ${DB_USERNAME:fitcorp_user}
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://${DB_HOST:mysql-ed8fd68-kemidikoushik1603-a3f8.h.aivencloud.com}:${DB_PORT:16612}/${DB_NAME:defaultdb}?sslMode=REQUIRED&useSSL=true&requireSSL=true&allowPublicKeyRetrieval=true}
+    username: ${DB_USERNAME:avnadmin}
     password: ${DB_PASSWORD:}
-    driver-class-name: org.postgresql.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       maximum-pool-size: 20
       minimum-idle: 5
@@ -16,7 +15,7 @@ spring:
       ddl-auto: validate
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.MySQLDialect
         jdbc:
           lob:
             non_contextual_creation: true

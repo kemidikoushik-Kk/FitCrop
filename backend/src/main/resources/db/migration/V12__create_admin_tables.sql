@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS meal_template_items (
     id VARCHAR(36) PRIMARY KEY,
     meal_template_id VARCHAR(36) NOT NULL,
     food_item_id VARCHAR(36) NOT NULL,
-    quantity DOUBLE PRECISION DEFAULT 1.0,
-    servings DOUBLE PRECISION DEFAULT 1.0,
+    quantity DOUBLE DEFAULT 1.0,
+    servings DOUBLE DEFAULT 1.0,
     CONSTRAINT fk_meal_tpl_items_tpl FOREIGN KEY (meal_template_id) REFERENCES meal_templates(id) ON DELETE CASCADE,
     CONSTRAINT fk_meal_tpl_items_food FOREIGN KEY (food_item_id) REFERENCES food_items(id)
 );

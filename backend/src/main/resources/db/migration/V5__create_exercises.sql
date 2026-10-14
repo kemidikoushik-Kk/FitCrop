@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS exercises (
     muscle_group VARCHAR(50) NOT NULL,
     equipment VARCHAR(50) NOT NULL,
     difficulty VARCHAR(30) NOT NULL,
-    estimated_calories_per_minute DOUBLE PRECISION DEFAULT 5.0,
+    estimated_calories_per_minute DOUBLE DEFAULT 5.0,
     duration_default_seconds INT DEFAULT 60,
     sets_default INT DEFAULT 3,
     reps_default INT DEFAULT 10,

@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS exercise_logs (
     exercise_id VARCHAR(36) NOT NULL,
     sets_completed INT DEFAULT 0,
     reps_completed INT DEFAULT 0,
-    weight_kg DOUBLE PRECISION DEFAULT 0.0,
+    weight_kg DOUBLE DEFAULT 0.0,
     is_completed BOOLEAN DEFAULT TRUE,
     notes TEXT,
     CONSTRAINT fk_exercise_logs_log FOREIGN KEY (workout_log_id) REFERENCES workout_logs(id) ON DELETE CASCADE,

@@ -1,4 +1,4 @@
--- FitCorp Database Initialization Script
--- Ensures UUID extension is available
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+-- FitCorp Database Initialization Script (MySQL / MariaDB Compatible)
+-- Default settings for character encoding and collation
+SET NAMES utf8mb4;
+SET time_zone = '+00:00';
