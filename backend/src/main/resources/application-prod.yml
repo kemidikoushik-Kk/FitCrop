@@ -1,8 +1,9 @@
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:fitcorp}
+    # Railway provides DATABASE_URL as a full JDBC URL — use it directly if set
+    url: ${SPRING_DATASOURCE_URL:${DATABASE_URL:jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:fitcorp}}}
     username: ${DB_USERNAME:fitcorp_user}
-    password: ${DB_PASSWORD:fitcorp_secure_pass_2026}
+    password: ${DB_PASSWORD:}
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 20
