@@ -19,7 +19,7 @@ fitcorp:
     access-expiration-ms: ${JWT_ACCESS_EXPIRATION_MS:900000} # 15 minutes
     refresh-expiration-ms: ${JWT_REFRESH_EXPIRATION_MS:604800000} # 7 days
   cors:
-    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000,http://localhost:80,http://localhost}
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000,http://localhost:80,http://localhost,http://127.0.0.1:5173,http://127.0.0.1}
   timezone: ${APP_TIMEZONE:Asia/Kolkata}
 
 springdoc:

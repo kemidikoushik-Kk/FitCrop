@@ -38,7 +38,7 @@ public class NutritionService {
     private final NutritionRecommendationService recommendationService;
     private final ProgressEntryRepository progressEntryRepository;
 
-    @Transactional(readOnly = true)
+    @Transactional
     public MealPlanResponse getActivePlan(String userId) {
         MealPlan plan = mealPlanRepository.findByUserIdAndStatus(userId, "ACTIVE")
                 .orElseGet(() -> {
@@ -59,7 +59,7 @@ public class NutritionService {
         return toPlanDto(plan);
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public List<MealResponse> getTodayMeals(String userId) {
         MealPlan plan = mealPlanRepository.findByUserIdAndStatus(userId, "ACTIVE")
                 .orElseGet(() -> {

@@ -61,6 +61,34 @@ export const LoginPage: React.FC = () => {
           </div>
         )}
 
+        <div className="mb-5 p-3 rounded-lg bg-slate-50 dark:bg-corporate-800/50 border border-slate-200 dark:border-corporate-700 space-y-2">
+          <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-center">
+            Instant Demo Sign-in
+          </p>
+          <div className="grid grid-cols-2 gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                setEmail('alex@fitcorp.com');
+                setPassword('User@123');
+              }}
+              className="px-2.5 py-1.5 text-xs font-medium rounded-md bg-white dark:bg-corporate-900 border border-slate-200 dark:border-corporate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-corporate-800 hover:border-brand-400 transition-colors shadow-xs"
+            >
+              💼 Alex (Demo User)
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setEmail('admin@fitcorp.com');
+                setPassword('Admin@123');
+              }}
+              className="px-2.5 py-1.5 text-xs font-medium rounded-md bg-white dark:bg-corporate-900 border border-slate-200 dark:border-corporate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-corporate-800 hover:border-brand-400 transition-colors shadow-xs"
+            >
+              🛡️ Admin
+            </button>
+          </div>
+        </div>
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input
             label="Work Email"

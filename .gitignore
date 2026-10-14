@@ -42,3 +42,8 @@ desktop.ini
 # Portable tools (downloaded by IDE)
 .git-portable.zip
 
+# Local Database
+backend/data/
+*.mv.db
+*.trace.db
+

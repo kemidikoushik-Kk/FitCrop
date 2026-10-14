@@ -41,7 +41,7 @@ public class WorkoutService {
     private final WorkoutRecommendationService recommendationService;
     private final ProgressEntryRepository progressEntryRepository;
 
-    @Transactional(readOnly = true)
+    @Transactional
     public WorkoutPlanResponse getActivePlan(String userId) {
         WorkoutPlan plan = workoutPlanRepository.findByUserIdAndStatus(userId, "ACTIVE")
                 .orElseGet(() -> {
@@ -54,7 +54,7 @@ public class WorkoutService {
         return toPlanDto(plan);
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public WorkoutDayResponse getTodayWorkout(String userId) {
         WorkoutPlan plan = workoutPlanRepository.findByUserIdAndStatus(userId, "ACTIVE")
                 .orElseGet(() -> {

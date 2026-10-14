@@ -68,8 +68,8 @@ INSERT INTO food_items (id, name, category, serving_unit, serving_size_grams, ca
 -- Password for admin: Admin@123 (BCrypt hash)
 -- Password for demo user: User@123 (BCrypt hash)
 INSERT INTO users (id, email, password_hash, full_name, is_active, is_email_verified, onboarding_completed, created_at) VALUES
-('u-admin-01', 'admin@fitcorp.com', '$2a$10$vI8qV08V1rT6yK8jCg0t8e6S5N6O3B1D2F4H5J6K7L8M9N0O1P2Q3', 'FitCorp Administrator', true, true, true, CURRENT_TIMESTAMP),
-('u-demo-01', 'alex@fitcorp.com', '$2a$10$vI8qV08V1rT6yK8jCg0t8e6S5N6O3B1D2F4H5J6K7L8M9N0O1P2Q3', 'Alex Morgan', true, true, true, CURRENT_TIMESTAMP);
+('u-admin-01', 'admin@fitcorp.com', '$2a$10$GWCV4kPtmxVFQH32TwP6WOZhbHmhwBX5SPFVfW0L8XIicMTt6UH/W', 'FitCorp Administrator', true, true, true, CURRENT_TIMESTAMP),
+('u-demo-01', 'alex@fitcorp.com', '$2a$10$w/vQWcaH2zd9dpDnktAY5OLZXAvAZDVdv2R.xDhbUdSQUWAR4gYku', 'Alex Morgan', true, true, true, CURRENT_TIMESTAMP);
 
 -- Assign Admin & User Roles
 INSERT INTO user_roles (user_id, role_id) VALUES

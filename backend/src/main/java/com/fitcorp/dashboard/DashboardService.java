@@ -36,7 +36,7 @@ public class DashboardService {
     private final ScheduleService scheduleService;
     private final NotificationRepository notificationRepository;
 
-    @Transactional(readOnly = true)
+    @Transactional
     public DashboardResponse getDashboardData(String userId) {
         User user = userRepository.findById(userId).orElseThrow();
 
